@@ -1,0 +1,884 @@
+
+/* ==========================================
+   GASOLINERAS SV - DISEÑO PROFESIONAL
+   ========================================== */
+
+:root {
+    --verde-oscuro: #103b2b;
+    --verde: #198754;
+    --verde-hover: #126b40;
+    --verde-claro: #e8f5ed;
+    --blanco: #ffffff;
+    --fondo: #f5f8f6;
+    --texto: #26332c;
+    --texto-secundario: #68756d;
+    --borde: #e1e9e3;
+    --radio: 18px;
+    --sombra: 0 8px 28px rgba(16, 59, 43, 0.08);
+    --sombra-hover: 0 16px 35px rgba(16, 59, 43, 0.14);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--fondo);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid #f4c542;
+    outline-offset: 4px;
+}
+
+/* ENCABEZADO */
+
+.encabezado {
+    width: 100%;
+    min-height: 78px;
+    padding: 15px 6%;
+    background: rgba(255, 255, 255, 0.97);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    border-bottom: 1px solid var(--borde);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 3px 15px rgba(16, 59, 43, 0.04);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--verde-oscuro);
+    font-size: 22px;
+    font-weight: 800;
+    white-space: nowrap;
+    letter-spacing: -0.5px;
+}
+
+.logo-icono {
+    font-size: 30px;
+}
+
+.logo strong {
+    color: var(--verde);
+}
+
+.navegacion {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.navegacion a {
+    color: var(--texto-secundario);
+    font-size: 14px;
+    font-weight: 700;
+    transition: color 0.2s ease;
+}
+
+.navegacion a:hover {
+    color: var(--verde);
+}
+
+/* PORTADA PRINCIPAL */
+
+.portada {
+    min-height: 460px;
+    padding: 85px 8%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 85% 20%, rgba(64, 173, 105, 0.35), transparent 30%),
+        radial-gradient(circle at 100% 100%, rgba(24, 135, 84, 0.25), transparent 35%),
+        linear-gradient(125deg, #103b2b, #17613e);
+    color: var(--blanco);
+}
+
+.portada-contenido {
+    max-width: 780px;
+    position: relative;
+    z-index: 1;
+}
+
+.etiqueta {
+    margin-bottom: 12px;
+    color: var(--verde);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.portada .etiqueta {
+    color: #b5f0c8;
+}
+
+.portada h1 {
+    max-width: 730px;
+    margin-bottom: 22px;
+    font-size: clamp(36px, 5vw, 58px);
+    line-height: 1.12;
+    letter-spacing: -1.8px;
+}
+
+.descripcion {
+    max-width: 600px;
+    color: #e0eee5;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.acciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 32px;
+}
+
+/* BOTONES */
+
+.boton {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 46px;
+    padding: 12px 21px;
+    border: 1px solid transparent;
+    border-radius: 11px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.boton:hover {
+    transform: translateY(-2px);
+}
+
+.boton-principal {
+    background: var(--verde);
+    color: var(--blanco);
+    box-shadow: 0 5px 15px rgba(25, 135, 84, 0.18);
+}
+
+.boton-principal:hover {
+    background: var(--verde-hover);
+}
+
+.portada .boton-principal {
+    background: var(--blanco);
+    color: var(--verde-oscuro);
+}
+
+.portada .boton-principal:hover {
+    background: #eaf5ee;
+}
+
+.boton-secundario {
+    border-color: rgba(255, 255, 255, 0.55);
+    color: var(--blanco);
+    background: transparent;
+}
+
+.boton-secundario:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.boton-tarjeta {
+    width: 100%;
+    margin-top: 18px;
+    background: var(--verde-claro);
+    color: var(--verde-oscuro);
+}
+
+.boton-tarjeta:hover {
+    background: #d5ecdd;
+}
+
+/* SECCIONES */
+
+.seccion {
+    padding: 76px 7%;
+}
+
+.seccion-alterna {
+    background: #edf3ef;
+}
+
+.titulo-seccion {
+    max-width: 720px;
+    margin: 0 auto 42px;
+    text-align: center;
+}
+
+.titulo-seccion h2 {
+    margin-bottom: 12px;
+    color: var(--verde-oscuro);
+    font-size: clamp(28px, 4vw, 38px);
+    line-height: 1.2;
+    letter-spacing: -0.7px;
+}
+
+.titulo-seccion > p:last-child {
+    color: var(--texto-secundario);
+    font-size: 15px;
+}
+
+/* TARJETAS DE GASOLINERAS */
+
+.rejilla-marcas {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.tarjeta-marca {
+    min-width: 0;
+    padding: 28px 23px;
+    background: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+    transition: transform 0.25s ease, box-shadow 0.25s ease,
+                border-color 0.25s ease;
+}
+
+.tarjeta-marca:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--sombra-hover);
+    border-color: #c4dfcc;
+}
+
+.marca-logo {
+    width: 88px;
+    height: 68px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+}
+
+
+.marca-uno {
+    background: #f0e5fa;
+    color: #542580;
+    font-weight: 900;
+}
+
+.marca-texaco {
+    background: #fce8e8;
+    color: #b5121b;
+    font-weight: 900;
+}
+
+.marca-puma {
+    background: #fff0e1;
+    color: #a9470b;
+    font-weight: 900;
+}
+
+.marca-shell {
+    background: #fff4d6;
+    color: #805900;
+    font-weight: 900;
+}
+
+
+
+/* TARJETAS DE GASOLINERAS: TEXTO MÁS NÍTIDO */
+
+.tarjeta-marca h3 {
+    margin-bottom: 9px;
+    color: #103b2b;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.tarjeta-marca p {
+    min-height: 48px;
+    color: #35483d;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.7;
+}
+
+
+/* UBICACIÓN */
+
+.ubicacion-panel {
+    margin-top: 32px;
+    padding: 28px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+}
+
+.ubicacion-panel h3 {
+    margin-bottom: 6px;
+    color: var(--verde-oscuro);
+    font-size: 20px;
+}
+
+.ubicacion-panel p {
+    color: var(--texto-secundario);
+    font-size: 14px;
+}
+
+#mensaje-ubicacion {
+    flex-basis: 100%;
+    padding-top: 5px;
+}
+
+.resultados {
+    margin-top: 22px;
+    padding: 26px;
+    background: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+    color: var(--texto-secundario);
+}
+
+.resultado-estacion {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--borde);
+}
+
+.resultado-estacion:last-child {
+    border-bottom: 0;
+}
+
+.resultado-estacion h3 {
+    margin-bottom: 7px;
+    color: var(--verde-oscuro);
+    font-size: 18px;
+}
+
+.resultado-estacion p {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+/* BOTONES PARA LLEGAR A LAS GASOLINERAS */
+.resultado-estacion a.boton {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    padding: 12px 22px;
+    background-color: var(--verde);
+    color: #ffffff !important;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 11px;
+    box-shadow: 0 5px 15px rgba(25, 135, 84, 0.18);
+}
+
+.resultado-estacion a.boton:hover {
+    background-color: var(--verde-hover);
+    color: #ffffff !important;
+    text-decoration: none;
+}
+
+.resultado-estacion a:hover {
+    text-decoration: underline;
+}
+
+/* TABLAS */
+
+.tabla-contenedor {
+    max-width: 1000px;
+    margin: auto;
+    padding: 28px;
+    overflow-x: auto;
+    background: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+    color: var(--texto-secundario);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+thead {
+    background: var(--verde-oscuro);
+    color: var(--blanco);
+}
+
+th,
+td {
+    padding: 15px 17px;
+    border-bottom: 1px solid var(--borde);
+    font-size: 14px;
+}
+
+th {
+    font-weight: 700;
+}
+
+tbody tr:nth-child(even) {
+    background: #f7faf8;
+}
+
+tbody tr:hover {
+    background: var(--verde-claro);
+}
+
+tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+/* PRECIOS */
+
+.precios-panel {
+    max-width: 650px;
+    margin: auto;
+    padding: 38px;
+    text-align: center;
+    background: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+}
+
+.icono-precios {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 46px;
+}
+
+.precios-panel h3 {
+    margin-bottom: 12px;
+    color: var(--verde-oscuro);
+    font-size: 22px;
+}
+
+.precios-panel p {
+    margin-bottom: 20px;
+    color: var(--texto-secundario);
+    font-size: 15px;
+}
+
+.enlace-oficial {
+    display: inline-block;
+    color: var(--verde);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.enlace-oficial:hover {
+    color: var(--verde-hover);
+}
+
+/* FUENTES DE INFORMACIÓN */
+
+.fuente-tarjeta {
+    max-width: 700px;
+    margin: auto;
+    padding: 30px;
+    background: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+}
+
+.fuente-tarjeta h3 {
+    margin-bottom: 10px;
+    color: var(--verde-oscuro);
+    font-size: 20px;
+}
+
+.fuente-tarjeta p {
+    margin-bottom: 16px;
+    color: var(--texto-secundario);
+    font-size: 14px;
+}
+
+.fuente-tarjeta a {
+    color: var(--verde);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* PIE DE PÁGINA */
+
+.pie-pagina {
+    padding: 34px 20px;
+    background: var(--verde-oscuro);
+    color: #e0eee5;
+    text-align: center;
+    font-size: 13px;
+}
+
+.pie-pagina p + p {
+    margin-top: 7px;
+    color: #b8d0c0;
+}
+
+/* PÁGINA DE DETALLE DE MARCA */
+
+.contenedor-detalle {
+    width: min(1100px, 88%);
+    margin: 0 auto;
+    padding: 48px 0 70px;
+}
+
+.cabecera-detalle {
+    margin-bottom: 28px;
+    padding: 36px;
+    background: linear-gradient(125deg, #103b2b, #17613e);
+    color: var(--blanco);
+    border-radius: var(--radio);
+}
+
+.cabecera-detalle h1 {
+    margin-bottom: 12px;
+    font-size: clamp(30px, 4vw, 42px);
+    line-height: 1.2;
+}
+
+.cabecera-detalle p {
+    color: #e0eee5;
+}
+
+.boton-volver {
+    display: inline-block;
+    margin-bottom: 22px;
+    color: var(--verde);
+    font-weight: 700;
+}
+
+.boton-volver:hover {
+    text-decoration: underline;
+}
+
+.detalle-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.detalle-panel {
+    padding: 26px;
+    background: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+}
+
+.detalle-panel h2 {
+    margin-bottom: 15px;
+    color: var(--verde-oscuro);
+    font-size: 21px;
+}
+
+.detalle-panel p {
+    margin-bottom: 10px;
+    color: var(--texto-secundario);
+    font-size: 14px;
+}
+
+.detalle-panel strong {
+    color: var(--texto);
+}
+
+.detalle-panel a {
+    color: var(--verde);
+    font-weight: 700;
+}
+
+.detalle-panel a:hover {
+    text-decoration: underline;
+}
+
+.detalle-panel table {
+    margin-top: 12px;
+}
+
+#estaciones-marca {
+    margin-top: 14px;
+}
+
+#estaciones-marca .resultado-estacion {
+    padding: 15px 0;
+}
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+    .encabezado {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .navegacion {
+        gap: 12px 18px;
+    }
+
+    .rejilla-marcas {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .portada {
+        padding: 75px 7%;
+    }
+
+    .seccion {
+        padding: 65px 6%;
+    }
+}
+
+/* CELULARES */
+
+@media (max-width: 600px) {
+    .encabezado {
+        padding: 14px 5%;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .logo-icono {
+        font-size: 25px;
+    }
+
+    .navegacion {
+        width: 100%;
+        gap: 10px 14px;
+    }
+
+    .navegacion a {
+        font-size: 12px;
+    }
+
+    .portada {
+        min-height: 400px;
+        padding: 58px 6%;
+    }
+
+    .portada h1 {
+        font-size: 36px;
+        letter-spacing: -1px;
+    }
+
+    .descripcion {
+        font-size: 15px;
+    }
+
+    .acciones {
+        flex-direction: column;
+    }
+
+    .acciones .boton {
+        width: 100%;
+    }
+
+    .seccion {
+        padding: 52px 5%;
+    }
+
+    .titulo-seccion {
+        margin-bottom: 30px;
+    }
+
+    .rejilla-marcas {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .tarjeta-marca {
+        padding: 24px;
+    }
+
+    .ubicacion-panel {
+        padding: 21px;
+    }
+
+    .ubicacion-panel .boton {
+        width: 100%;
+    }
+
+    .resultados {
+        padding: 20px;
+    }
+
+    .precios-panel,
+    .fuente-tarjeta,
+    .tabla-contenedor {
+        padding: 20px;
+    }
+
+    th,
+    td {
+        padding: 12px;
+        font-size: 13px;
+    }
+
+    .contenedor-detalle {
+        width: 92%;
+        padding: 28px 0 45px;
+    }
+
+    .cabecera-detalle {
+        padding: 25px 21px;
+    }
+
+    .detalle-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .detalle-panel {
+        padding: 21px;
+    }
+}
+
+/* ACCESIBILIDAD: REDUCIR ANIMACIONES */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
+
+
+/* ==========================================
+   AJUSTES: COMPARACIÓN DE GASOLINERAS
+   ========================================== */
+
+/* Reduce el espacio superior e inferior de la sección */
+#comparar.seccion {
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+
+/* Reduce el espacio entre el título y la tabla */
+#comparar .titulo-seccion {
+    margin-bottom: 22px;
+}
+
+/* Mantiene la tabla compacta y aprovecha el ancho disponible */
+#comparar .tabla-contenedor {
+    max-width: 1100px;
+    padding: 20px;
+}
+
+/* Hace más compactas las filas de la tabla */
+#comparar th,
+#comparar td {
+    padding: 12px 15px;
+}
+
+/* Mejora la lectura de los precios */
+#comparar td {
+    color: var(--texto);
+}
+
+/* Ajustes para teléfonos */
+@media (max-width: 600px) {
+    #comparar.seccion {
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+
+    #comparar .titulo-seccion {
+        margin-bottom: 18px;
+    }
+
+    #comparar .tabla-contenedor {
+        padding: 12px;
+    }
+
+
+    #comparar td {
+        color: #173f34;
+        font-weight: 700;
+    }
+
+}
+
+
+/* Imagen formal de cada gasolinera */
+.portada-gasolinera {
+    width: 90%;
+    max-width: 650px;
+    height: 250px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #f1f1f1;
+    border: 1px solid #e5e5e5;
+}
+
+.portada-gasolinera img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 600px) {
+    .portada-gasolinera {
+        width: 100%;
+        height: 190px;
+    }
+}
+

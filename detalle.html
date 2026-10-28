@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#12372A">
+
+    <title>Información de gasolinera | Gasolineras SV</title>
+
+    <meta
+        name="description"
+        content="Consulta información, combustibles y servicios de gasolineras en El Salvador."
+    >
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="encabezado">
+        <a href="index.html#inicio" class="logo">
+            <span class="logo-icono">⛽</span>
+            <span>Gasolineras <strong>SV</strong></span>
+        </a>
+
+        <nav class="navegacion" aria-label="Navegación principal">
+            <a href="index.html#inicio">Inicio</a>
+            <a href="index.html#gasolineras">Gasolineras</a>
+            <a href="index.html#comparar">Comparar</a>
+            <a href="index.html#precios">Precios</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- INFORMACIÓN PRINCIPAL DE LA MARCA -->
+        <section class="seccion">
+            <a href="index.html#gasolineras" class="enlace-oficial">
+                ← Volver a las gasolineras
+            </a>
+            
+                <div class="portada-gasolinera">
+                    <img id="imagen-marca" src="" alt="Imagen de la gasolinera">
+                </div>
+
+
+            <div class="titulo-seccion">
+                <p class="etiqueta">CONOCE LA MARCA</p>
+
+                <h1 id="nombre-marca">Información de la gasolinera</h1>
+
+                <p id="descripcion-marca">
+                    Información general de la marca seleccionada.
+                </p>
+            </div>
+
+            <div class="precios-panel">
+                <h2>Información general</h2>
+
+                <p>
+                    <strong>Marca:</strong>
+                    <span id="dato-marca">Pendiente</span>
+                </p>
+
+                <p>
+                    <strong>Combustibles:</strong>
+                    <span id="dato-combustibles">
+                        Información pendiente de verificar
+                    </span>
+                </p>
+
+                <p>
+                    <strong>Servicios:</strong>
+                    <span id="dato-servicios">
+                        Información pendiente de verificar
+                    </span>
+                </p>
+
+                <p>
+                    <strong>Tiendas y productos:</strong>
+                    <span id="dato-tienda">
+                        Información pendiente de verificar
+                    </span>
+                </p>
+            </div>
+        </section>
+
+        <!-- PRECIOS -->
+        <section class="seccion seccion-alterna">
+            <div class="titulo-seccion">
+                <p class="etiqueta">COMPARA</p>
+                <h2>Precios de combustibles</h2>
+
+                <p>
+                    Los precios deben verificarse con fuentes oficiales
+                    y pueden variar según la estación.
+                </p>
+            </div>
+
+            <div class="tabla-contenedor">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Combustible</th>
+                            <th>Precio por galón</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tabla-precios-marca">
+                        <tr>
+                            <td>Gasolina regular</td>
+                            <td>Pendiente de verificar</td>
+                        </tr>
+
+                        <tr>
+                            <td>Gasolina especial</td>
+                            <td>Pendiente de verificar</td>
+                        </tr>
+
+                        <tr>
+                            <td>Diésel</td>
+                            <td>Pendiente de verificar</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p>
+                <small>
+                    No se mostrarán precios como confirmados hasta
+                    verificar la información correspondiente.
+                </small>
+            </p>
+
+            <p>
+                <a
+                    href="https://estadisticas.dgehm.gob.sv/combustibles/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="enlace-oficial"
+                >
+                    Consultar precios oficiales
+                </a>
+            </p>
+        </section>
+
+        <!-- CONTACTO -->
+        <section class="seccion">
+            <div class="titulo-seccion">
+                <p class="etiqueta">CONTACTO</p>
+                <h2>Teléfono y correo electrónico</h2>
+
+                <p>
+                    <strong>Teléfono:</strong>
+                    <span id="dato-telefono">
+                        Pendiente de verificar
+                    </span>
+                </p>
+
+                <p>
+                    <strong>Correo electrónico:</strong>
+                    <span id="dato-correo">
+                        Pendiente de verificar
+                    </span>
+                </p>
+
+                <p>
+                    <strong>Sitio web oficial:</strong>
+                    <a
+                        id="enlace-oficial-marca"
+                        href="https://www.google.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Consultar información oficial
+                    </a>
+                </p>
+            </div>
+        </section>
+
+        <!-- ESTACIONES CERCANAS -->
+        <section class="seccion seccion-alterna">
+            <div class="titulo-seccion">
+                <p class="etiqueta">ENCUENTRA TU ESTACIÓN</p>
+                <h2>Estaciones de esta marca</h2>
+
+                <p>
+                    Consulta las estaciones registradas cerca de tu ubicación.
+                </p>
+
+                <a
+                    id="buscar-estaciones-marca"
+                    href="https://www.google.com/maps"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="boton boton-principal"
+                >
+                    Buscar estaciones en Google Maps
+                </a>
+            </div>
+
+            <div id="estaciones-marca" class="resultados">
+                <p>
+                    La lista de estaciones se incorporará en el siguiente paso.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie-pagina">
+        <p>Gasolineras SV · Sistema de consulta y comparación</p>
+        <p>Proyecto informativo para El Salvador.</p>
+    </footer>
+
+    <script src="detalle.js"></script>
+
+</body>
+</html>

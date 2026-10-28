@@ -1,0 +1,378 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#12372A">
+
+    <title>Gasolineras SV | El Salvador</title>
+
+    <meta
+        name="description"
+        content="Consulta, compara y encuentra gasolineras en El Salvador."
+    >
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="encabezado">
+        <a href="#inicio" class="logo">
+            <span class="logo-icono">⛽</span>
+            <span>Gasolineras <strong>SV</strong></span>
+        </a>
+
+        <nav class="navegacion" aria-label="Navegación principal">
+            <a href="#inicio">Inicio</a>
+            <a href="#gasolineras">Gasolineras</a>
+            <a href="#comparar">Comparar</a>
+            <a href="#precios">Precios</a>
+            <a href="#fuentes">Fuentes</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- PORTADA -->
+        <section id="inicio" class="portada">
+            <div class="portada-contenido">
+                <p class="etiqueta">TU GUÍA DE COMBUSTIBLE</p>
+
+                <h1>Encuentra tu próxima gasolinera en El Salvador</h1>
+
+                <p class="descripcion">
+                    Consulta estaciones, compara opciones y encuentra
+                    rutas para llegar a tu próxima parada.
+                </p>
+
+                <div class="acciones">
+                    <a href="#gasolineras" class="boton boton-principal">
+                        Encontrar gasolineras
+                    </a>
+
+                    <a href="#comparar" class="boton boton-secundario">
+                        Comparar opciones
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- GASOLINERAS -->
+        <section id="gasolineras" class="seccion">
+            <div class="titulo-seccion">
+                <p class="etiqueta">EXPLORA</p>
+                <h2>Gasolineras</h2>
+
+                <p>
+                    Selecciona una marca para conocer sus estaciones
+                    y consultar su información.
+                </p>
+            </div>
+
+            <div class="rejilla-marcas">
+
+                <article class="tarjeta-marca">
+                    <div class="marca-logo marca-uno">UNO</div>
+                    <h3>UNO</h3>
+                    <p>Consulta estaciones y servicios de esta marca.</p>
+
+                    <a href="detalle.html?marca=UNO" class="boton boton-tarjeta">
+                        Ver información
+                    </a>
+                </article>
+
+                <article class="tarjeta-marca">
+                    <div class="marca-logo marca-texaco">T</div>
+                    <h3>Texaco</h3>
+                    <p>Consulta estaciones y servicios de esta marca.</p>
+
+                    <a href="detalle.html?marca=Texaco" class="boton boton-tarjeta">
+                        Ver información
+                    </a>
+                </article>
+
+                <article class="tarjeta-marca">
+                    <div class="marca-logo marca-puma">PUMA</div>
+                    <h3>Puma</h3>
+                    <p>Consulta estaciones y servicios de esta marca.</p>
+
+                    <a href="detalle.html?marca=Puma" class="boton boton-tarjeta">
+                        Ver información
+                    </a>
+                </article>
+
+                <article class="tarjeta-marca">
+                    <div class="marca-logo marca-shell">SHELL</div>
+                    <h3>Shell</h3>
+                    <p>Consulta estaciones y servicios de esta marca.</p>
+
+                    <a href="detalle.html?marca=Shell" class="boton boton-tarjeta">
+                        Ver información
+                    </a>
+                </article>
+
+            </div>
+
+            <!-- UBICACIÓN -->
+            <div class="ubicacion-panel">
+                <div>
+                    <h3>¿Qué gasolineras tienes cerca?</h3>
+
+                    <p>
+                        Permite el acceso a tu ubicación para buscar
+                        estaciones cercanas.
+                    </p>
+                </div>
+
+                <button
+                    id="btn-ubicacion"
+                    class="boton boton-principal"
+                    type="button"
+                >
+                    Usar mi ubicación
+                </button>
+
+                <p
+                    id="mensaje-ubicacion"
+                    role="status"
+                    aria-live="polite"
+                ></p>
+            </div>
+
+            <!-- RESULTADOS DE BÚSQUEDA -->
+            <div id="resultados-gasolineras" class="resultados">
+                <p>
+                    Las estaciones cercanas aparecerán aquí cuando
+                    se realice la búsqueda.
+                </p>
+            </div>
+        </section>
+
+        <!-- COMPARACIÓN DE GASOLINERAS -->
+        <section id="comparar" class="seccion seccion-alterna">
+            <div class="titulo-seccion">
+                <p class="etiqueta">ELIGE MEJOR</p>
+                <h2>Compara tus opciones</h2>
+
+                <p>
+                    Compara los precios por galón de las principales
+                    gasolineras y elige la opción que más te convenga.
+                </p>
+            </div>
+
+            <div id="tabla-comparacion" class="tabla-contenedor">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Gasolinera</th>
+                            <th>Regular</th>
+                            <th>Especial</th>
+                            <th>Diésel</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>UNO</td>
+                            <td>$4.68</td>
+                            <td>$5.13</td>
+                            <td>$4.86</td>
+                        </tr>
+
+                        <tr>
+                            <td>Texaco</td>
+                            <td>$4.70</td>
+                            <td>$5.13</td>
+                            <td>$4.86</td>
+                        </tr>
+
+                        <tr>
+                            <td>Puma</td>
+                            <td>$4.80</td>
+                            <td>$5.13</td>
+                            <td>$4.86</td>
+                        </tr>
+
+                        <tr>
+                            <td>Shell</td>
+                            <td>$4.80</td>
+                            <td>$5.13</td>
+                            <td>$4.86</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p class="nota-comparacion">
+                Precios expresados en dólares por galón.
+            </p>
+        </section>
+
+        <!-- PRECIOS DE REFERENCIA -->
+        <section id="precios" class="seccion">
+            <div class="titulo-seccion">
+                <p class="etiqueta">INFORMACIÓN OFICIAL</p>
+                <h2>Precios de referencia</h2>
+
+                <p>
+                    Consulta los precios de referencia del combustible
+                    para la zona central de El Salvador.
+                </p>
+            </div>
+
+            <div class="precios-panel">
+                <h3>Precios de referencia en El Salvador</h3>
+
+                <p>
+                    Precios de referencia atribuidos a la Dirección General
+                    de Energía, Hidrocarburos y Minas.
+                </p>
+
+                <p>
+                    <strong>Vigencia:</strong>
+                    del 27 de octubre al 9 de noviembre de 2026.
+                </p>
+
+                <p>
+                    <strong>Unidad:</strong> dólares por galón.
+                </p>
+
+                <!-- TABLA DE PRECIOS DE REFERENCIA -->
+                <div class="tabla-contenedor">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tipo de combustible</th>
+                                <th>Precio por galón</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Gasolina regular</td>
+                                <td>$4.80</td>
+                            </tr>
+
+                            <tr>
+                                <td>Gasolina especial</td>
+                                <td>$5.13</td>
+                            </tr>
+
+                            <tr>
+                                <td>Diésel bajo en azufre</td>
+                                <td>$4.86</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    <small>
+                        Los precios de referencia pueden diferir de los
+                        precios de venta de cada estación.
+                    </small>
+                </p>
+
+                <!-- ENLACES OFICIALES DE PRECIOS -->
+                <div class="enlaces-precios">
+                    <p>
+                        <a
+                            href="https://estadisticas.dgehm.gob.sv/combustibles/precios-al-consumidor-empresa-especial-regular/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="enlace-oficial"
+                        >
+                            Consultar precios de gasolina por empresa
+                        </a>
+                    </p>
+
+                    <p>
+                        <a
+                            href="https://estadisticas.dgehm.gob.sv/combustibles/precios-consumidor-empresa-diesel-diesel-bajo-azufre/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="enlace-oficial"
+                        >
+                            Consultar precios de diésel por empresa
+                        </a>
+                    </p>
+
+                    <p>
+                        <a
+                            href="https://estadisticas.dgehm.gob.sv/combustibles/precios-referencia/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="enlace-oficial"
+                        >
+                            Consultar precios oficiales de referencia
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FUENTES DE INFORMACIÓN -->
+        <section id="fuentes" class="seccion seccion-alterna">
+            <div class="titulo-seccion">
+                <p class="etiqueta">TRANSPARENCIA</p>
+                <h2>Fuentes de información</h2>
+
+                <p>
+                    Consulta las fuentes utilizadas para verificar
+                    los precios y localizar las estaciones.
+                </p>
+            </div>
+
+            <div class="fuente-tarjeta">
+                <h3>
+                    Dirección General de Energía, Hidrocarburos y Minas
+                </h3>
+
+                <p>
+                    Fuente oficial para consultar estadísticas de
+                    combustibles, precios de referencia y precios
+                    al consumidor por empresa.
+                </p>
+
+                <a
+                    href="https://estadisticas.dgehm.gob.sv/combustibles/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Consultar estadísticas oficiales
+                </a>
+            </div>
+
+            <div class="fuente-tarjeta">
+                <h3>OpenStreetMap</h3>
+
+                <p>
+                    Fuente de datos geográficos que puede utilizarse
+                    para localizar estaciones registradas en el mapa.
+                </p>
+
+                <a
+                    href="https://www.openstreetmap.org/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Consultar OpenStreetMap
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie-pagina">
+        <p>Gasolineras SV · Sistema de consulta y comparación</p>
+        <p>Proyecto informativo para El Salvador.</p>
+    </footer>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
